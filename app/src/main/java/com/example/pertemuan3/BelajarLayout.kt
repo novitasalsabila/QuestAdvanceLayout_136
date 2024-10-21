@@ -16,6 +16,7 @@ import androidx.compose.material.icons.filled.Check
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -73,25 +74,26 @@ fun HeaderSection(){
                 .fillMaxWidth()
                 .padding(16.dp)
         ){
-            Image(painter = painterResource(id = R.drawable.logo),
-                contentDescription = null,
-                modifier = Modifier.clip(CircleShape)
-            )
-            Icon(
-                Icons.Filled.Check,
-                contentDescription =null,
-                modifier =Modifier.size(30.dp).background(color = Color.Blue)
-            )
+            Box(
+                contentAlignment = Alignment.BottomEnd
+            ){
+                Image(painter = painterResource(id = R.drawable.logo),
+                    contentDescription = null,
+                    modifier = Modifier.clip(CircleShape)
+                )
+                Icon(
+                    Icons.Filled.Check,
+                    contentDescription =null,
+                    modifier =Modifier.size(30.dp).background(color = Color.Blue)
+                )
+            }
+            Column(
+                modifier = Modifier.padding(14.dp)
+            ){
+                Text(text = "Teknologi Informasi")
+                Text(text = "Universitas Muhammadiyah Yogyakarta")
+            }
         }
-        Column(
-           modifier = Modifier.padding(14.dp)
-        ){
-            Text(text = "Teknologi Informasi")
-            Text(text = "Universitas Muhammadiyah Yogyakarta")
-        }
-
-
-
     }
 }
 
