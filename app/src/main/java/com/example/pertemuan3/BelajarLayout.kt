@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
@@ -18,10 +19,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.painterResource as painterResource
 
-
+@Preview(showBackground = true)
 @Composable
 fun BelajarLayout(
     modifier: Modifier = Modifier
@@ -32,7 +34,27 @@ fun BelajarLayout(
         HeaderSection()
         DetailMhs(
             param = "Nama",
-            argu = "Novi"
+            argu = "Novita Salsabila"
+        )
+        DetailMhs(
+            param = "NIM",
+            argu = "20220140136"
+        )
+        DetailMhs(
+            param = "Prodi",
+            argu = "Teknologi Informasi"
+        )
+        DetailMhs(
+            param = "Fakultas",
+            argu = "Teknik"
+        )
+        DetailMhs(
+            param = "Universitas",
+            argu = "Muhammadiyah"
+        )
+        DetailMhs(
+            param = "Alamat",
+            argu = "JL.Puntadewa"
         )
         DetailMhs(param = "Nim", argu = "20220140146")
 
@@ -58,7 +80,7 @@ fun HeaderSection(){
             Icon(
                 Icons.Filled.Check,
                 contentDescription =null,
-                modifier =Modifier.padding(30.dp)
+                modifier =Modifier.size(30.dp).background(color = Color.Blue)
             )
         }
         Column(
